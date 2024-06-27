@@ -15,7 +15,7 @@ function App() {
   const startDate = value[0]?.add(1, 'day')?.toISOString().split('T')[0] || '';
   const endDate = value[1]?.add(1, 'day')?.toISOString().split('T')[0] || '';
 
-  console.log(startDate, endDate);
+  console.log(startDate, endDate, value);
 
   const { data, isLoading, error } = useRateCalendar(startDate, endDate);
 
@@ -27,13 +27,15 @@ function App() {
             <Typography variant='h6' sx={{ marginBottom: "10px", fontWeight: "600" }}>Rate Calender</Typography>
             <GetDateRange value={value} setValue={setValue} />
           </Box>
-          {isLoading && <CircularProgress />}
-          {error && <Alert severity="error">Error loading data</Alert>}
-          {data ? (
-            <RoomCategorySection roomCategories={data} />
-          ) : (
-            <Alert severity="info">Please select a Date Range.</Alert>
-          )}
+          {
+            value[0] == null ? <Alert severity="info">Please select a Date Range.</Alert>
+              : <>
+                {isLoading && <CircularProgress />}
+                {error && <Alert severity="error">Error loading data</Alert>}
+              </>
+          }
+
+          {data && <RoomCategorySection roomCategories={data} />}
         </Container>
       </LocalizationProvider>
     </>
