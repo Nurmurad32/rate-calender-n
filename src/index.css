@@ -1,0 +1,68 @@
+:root {
+  background-color: #eef2f6;
+}
+.p-0{
+  padding: 2px !important;
+  line-height: 1rem !important;
+}
+
+tbody > tr > td,
+thead > tr > th {
+  border-left: 1px solid rgba(224, 224, 224, 1);
+  border-right: 1px solid rgba(224, 224, 224, 1);
+  border-bottom: 1px solid rgba(224, 224, 224, 1);
+  font-weight: 600 !important;
+  padding: 8px !important;
+}
+.rate-calender-title{
+  background-color: white;
+  padding: 30px 20px; 
+  border-radius: 5px; 
+  margin:20px 0;
+}
+.room-rate{
+    font-weight: 600 !important;
+}
+
+.table-room-box {
+  border-bottom: none !important;
+}
+.table-room-box h5 {
+  padding: 7px 20px 7px 0px;
+  font-weight: 600;
+}
+
+.room-name-btn-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.bulk-btn {
+  background-color: #f68656;
+  border: 1px solid #f68656;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: white;
+  font-weight: 500;
+  display: flex;
+  font-size: 13px !important;
+}
+.bulk-btn svg {
+  margin-right: 10px;
+  font-size: 18px !important;
+}
+.icon-text {
+  display: flex;
+  margin-left: 15px;
+  flex-direction: row;
+  align-items: center;
+  color: #0188d1;
+}
+.icon-text svg {
+  margin-right: 8px;
+}
+.blank-cell{
+    background-color: #2F7D31;
+}
